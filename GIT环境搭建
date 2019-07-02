@@ -8,18 +8,20 @@ GIT环境搭建
 搭建git服务器（远程仓库）
 jackielgl  abc1234567890
 5、配置ssh,先在本地配置，然后发送给远程
-本地生成
-ssh-keygen -t rsa -C 55743886@qq.com
+先在本地生成ssh
+ssh-keygen -t rsa -C 55743886@qq.com 一直回车 
 发送给远程：
 登录github -> settings -> ssh and GPG keys 进行创建(.ssh/id_rsa.pub中的内容)
 
-验证： ssh -T git@github.com
-
+验证联通性： 
+ssh -T git@github.com
+如果本地和远程成功通信，则可以在.ssh目录中发现known_hosts文件
 
 6、实例
 本地建项目
-右键 ： git init
-https://github.com/jackielgl/mygit.git
+右键 git-bash ，执行 ： git init
+远程建立git项目，生成：
+https://github.com/jackielgl/learngit.git
 
 本地项目 -远程项目关联
 git remote add origin https://github.com/jackielgl/learngit.git
