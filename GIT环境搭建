@@ -1,0 +1,48 @@
+GIT环境搭建
+1、安装git  msysgit.github.io
+2、安装时候 Use git from git bash only 选中，其他默认。
+3、配置path：bin
+4、git config --global user.name "jakcielgl"
+   git config --global user.email "5543886@qq.com"
+
+搭建git服务器（远程仓库）
+jackielgl  abc1234567890
+5、配置ssh,先在本地配置，然后发送给远程
+本地生成
+ssh-keygen -t rsa -C 55743886@qq.com
+发送给远程：
+登录github -> settings -> ssh and GPG keys 进行创建(.ssh/id_rsa.pub中的内容)
+
+验证： ssh -T git@github.com
+
+
+6、实例
+本地建项目
+右键 ： git init
+https://github.com/jackielgl/mygit.git
+
+本地项目 -远程项目关联
+git remote add origin https://github.com/jackielgl/learngit.git
+第一次发布项目（三大步）
+git add .   # 文件到暂存区
+git commit -m "注释"
+git push -u origin master # 远程提交
+
+第一次下载
+git clone
+
+提交
+git add.
+git commit -m "提交到分组"
+git push origin master
+
+更新（远程到本地）：
+git pull
+
+
+
+
+git add : 本地暂存区
+git commit: 本地仓库
+git push : 远程仓库
+git pull : 从远程仓库拉取到本地仓库
